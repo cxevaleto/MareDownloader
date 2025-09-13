@@ -1,6 +1,7 @@
 # MareDownloader
 A GTK4 application that downloads images of mares based on https://derpibooru.org
 ![screenshot](screenshot.png)
+
 Fluttershy by lightof-dawn
 
 # Instalation
