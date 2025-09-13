@@ -48,14 +48,14 @@ class CatgirldownloaderApplication(Adw.Application):
         win = self.props.active_window
         if not win:
             win = CatgirldownloaderWindow(application=self)
-        win.set_title("Catgirl Downloader")
+        win.set_title("Mare Downloader")
         self.window = win
         win.present()
 
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                application_name='Catgirl Downloader',
+                                application_name='Mare Downloader',
                                 application_icon='moe.nyarchlinux.catgirldownloader',
                                 developer_name='Nyarch Linux developers team',
                                 version='0.2.6',
@@ -68,8 +68,7 @@ class CatgirldownloaderApplication(Adw.Application):
         if hasattr(self.window, "info"):
             info = self.window.info["images"][0]
             about = Adw.AboutWindow(transient_for=self.props.active_window,
-                                    artists=[info['artist']],
-                                    website="https://nekos.moe/post/" + info['id'])
+                                    website="https://derpibooru.org/images/" + str(info['id']))
             about.present()
 
     def on_preferences_action(self, widget, _):

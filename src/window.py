@@ -95,10 +95,10 @@ class CatgirldownloaderWindow(Adw.ApplicationWindow):
             self.dialog.add_filter(image_filter)
             # And suggest a sensible default filename
             # using this format ensures the image source can easily be found from its name
-            self.dialog.set_current_name(f"nekos.moe_{image_id}.{file_extension}")
+            self.dialog.set_current_name(f"{image_id}.{file_extension}")
         else:
             # Otherwise just suggest a sensible default filename (normally the extension should always be there, but just in case)
-            self.dialog.set_current_name(f"nekos.moe_{image_id}")
+            self.dialog.set_current_name(f"{image_id}")
 
         # Buttons
         self.dialog.add_button('Cancel', Gtk.ResponseType.CANCEL)
