@@ -24,14 +24,14 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import CatgirldownloaderWindow
+from .window import MaredownloaderWindow
 from .preferenceswindow import PreferencesWindow
 
-class CatgirldownloaderApplication(Adw.Application):
+class MaredownloaderApplication(Adw.Application):
     """The main application singleton class."""
 
     def __init__(self):
-        super().__init__(application_id='moe.nyarchlinux.catgirldownloader',
+        super().__init__(application_id='moe.ponix.maredownloader',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         self.create_action('quit', self.quit, ['<primary>q'])
         self.create_action('about', self.on_about_action)
@@ -47,7 +47,7 @@ class CatgirldownloaderApplication(Adw.Application):
         """
         win = self.props.active_window
         if not win:
-            win = CatgirldownloaderWindow(application=self)
+            win = MaredownloaderWindow(application=self)
         win.set_title("Mare Downloader")
         self.window = win
         win.present()
@@ -56,7 +56,7 @@ class CatgirldownloaderApplication(Adw.Application):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Mare Downloader',
-                                application_icon='moe.nyarchlinux.catgirldownloader',
+                                application_icon='moe.ponix.maredownloader',
                                 developer_name='Nyarch Linux developers team',
                                 version='0.2.6',
                                 developers=['SilverOS'],
@@ -96,5 +96,5 @@ class CatgirldownloaderApplication(Adw.Application):
 
 def main(version):
     """The application's entry point."""
-    app = CatgirldownloaderApplication()
+    app = MaredownloaderApplication()
     return app.run(sys.argv)

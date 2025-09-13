@@ -1,6 +1,6 @@
 #!/bin/bash
-APPID="moe.nyarchlinux.catgirldownloader"
-BUNDLENAME="catgirldownloader.flatpak"
+APPID="moe.ponix.maredownloader"
+BUNDLENAME="maredownloader.flatpak"
 flatpak-builder --install --user --force-clean flatpak-app "$APPID".json
 
 if [ "$1" = "bundle" ]; then

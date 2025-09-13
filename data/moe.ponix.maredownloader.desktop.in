@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Mare Downloader
+Comment=Useful application to download mare images
+Exec=maredownloader
+Icon=moe.ponix.maredownloader
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=true
