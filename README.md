@@ -20,5 +20,13 @@ meson setup --prefix=~/.local build
 ```bash
 cd build
 ninja
-meson install
+ninja install
+```
+
+# Uninstalation
+If you really wanna get rid of mares
+
+```bash
+cd build
+ninja uninstall
 ```
